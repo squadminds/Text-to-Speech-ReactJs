@@ -1,0 +1,14 @@
+.App {
+  display: block;
+  text-align: center;
+  /* background-color: rgb(29, 19, 4); */
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+body {
+  background-color: rgb(179, 175, 184);
+}

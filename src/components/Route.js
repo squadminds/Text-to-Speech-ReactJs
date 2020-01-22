@@ -7,8 +7,10 @@ export default function Routes() {
   return (
     <div>
       <Switch>
-        <Route path="/" component={Login} />
-        <Route path="/Register" component={Register} />
+        <Route exact path="/" component={Login} />
+        <Route exact path="/Login" component={Login} />
+
+        <Route exact path="/Register" component={Register} />
         {/* <Route path="/chat" component={Groupchat} /> */}
       </Switch>
     </div>

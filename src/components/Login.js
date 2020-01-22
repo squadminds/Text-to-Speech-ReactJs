@@ -4,24 +4,24 @@ import Register from "./Register";
 export default class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      LoginComponent: false
-    };
+    // this.state = {
+    //   LoginComponent: false
+    // };
     this._onButtonClick = this._onButtonClick.bind(this);
   }
 
   _onButtonClick() {
-    console.log("props :", this.props);
-    this.props.history.push("/Register");
+    // console.log("props :", this.props);
     // this.setState({
     //   LoginComponent: true
     // });
+    this.props.history.push("/Register");
   }
 
   render() {
     return (
       <div>
-        <div>{this.state.LoginComponent && <Register />}</div>
+        {/* <div>{this.state.LoginComponent && <Register />}</div> */}
 
         <img className="img" src="./image.jpg" alt="logo" />
         <div class="card">
@@ -41,7 +41,7 @@ export default class Login extends Component {
             </div>
             <div className="button">
               <button type="button" class="btn btn-primary">
-                Submit
+                Login
               </button>
               <div className="button2">
                 <button

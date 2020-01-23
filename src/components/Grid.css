@@ -29,13 +29,13 @@ h3 {
 }
 
 .col-sm-4 {
-  position: sticky;
+  position: fixed;
   height: calc(70vh - 4rem);
   overflow-y: auto;
 }
 
 .col-sm-8 {
-  position: sticky;
+  position: fixed;
   height: calc(70vh - 4rem);
   overflow-y: auto;
 }

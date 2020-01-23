@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Grid.css";
 
-export default class gridSystem extends Component {
+export default class GridSystem extends Component {
   render() {
     return (
       <div class="container">
@@ -30,7 +30,6 @@ export default class gridSystem extends Component {
             <ul className="chatoutput">
               <p>hi my name is vivek</p>
               <p>hi my name is vivek</p>
-
               <p>hi my name is vivek</p>
               <p>hi my name is vivek</p>
               <p>hi my name is vivek</p>
@@ -41,8 +40,11 @@ export default class gridSystem extends Component {
         </div>
         <div class="row">
           <div class="col-sm-6"></div>
-          <div class="col-sm-6 offset-sm-4">
+          <div class="col-sm-6 offset-sm-6">
             <textarea className="textarea"></textarea>
+            <button type="button" class="btn btn-primary">
+              send
+            </button>
           </div>
         </div>
       </div>

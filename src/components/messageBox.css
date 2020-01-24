@@ -1,0 +1,11 @@
+.messageDisplay {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: aqua;
+  border-top: 1px solid #eeeef1;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-left: auto;
+}

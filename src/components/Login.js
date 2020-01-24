@@ -23,7 +23,7 @@ export default class Login extends Component {
       <div>
         {/* <div>{this.state.LoginComponent && <Register />}</div> */}
 
-        <img className="img" src="./image.jpg" alt="logo" />
+        <img className="imgages" src="./image.jpg" alt="logo" />
         <div class="card">
           <div class="card-body">
             <h3>Sign in</h3>

@@ -16,11 +16,13 @@ p {
   padding-top: 20px;
 }
 
-img {
+.images {
   height: 10%;
   width: 7%;
   margin-top: 100px;
   margin-bottom: 10px;
+  text-align: center;
+  /* margin-left: 600px; */
 }
 
 .form-group {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Register.css";
+import "./Login.css";
 export default class Register extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +20,7 @@ export default class Register extends Component {
   render() {
     return (
       <div>
-        <img className="img" src="./image1.jpg" alt="logo" />
+        <img className="images" src="./image1.jpg" alt="logo" />
         <div class="card">
           <div class="card-body">
             <h3>Register</h3>

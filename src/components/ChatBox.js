@@ -20,9 +20,6 @@ export default class ChatBox extends Component {
               {message.senderId}
               <br />
               <textarea placeholder="Enter text here...."></textarea>
-              <button type="button" class="btn btn-primary">
-                Send
-              </button>
             </div>
           );
         })}

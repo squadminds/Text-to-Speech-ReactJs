@@ -46,11 +46,6 @@
   position: -webkit-sticky;
 }
 
-.toolbar {
-  font-size: 20px;
-  font-style: bold;
-}
-
 .avatar {
   vertical-align: middle;
   width: 50px;
@@ -87,8 +82,19 @@
 }
 
 .scrollBar {
-  position: fixed;
-  height: calc(120vh - 2rem);
-  width: 26%;
+  position: relative;
+  height: calc(111vh - 2rem);
+  width: 110%;
   overflow-y: auto;
+  background: #fff;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.scrollableContent {
+  background: #fff;
+  grid-row-start: 1;
+  grid-row-end: span 3;
+  position: relative;
+  overflow-y: scroll;
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./messageBox.css";
 
 export default class MessageBox extends Component {
   constructor() {
@@ -18,7 +19,7 @@ export default class MessageBox extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // console.log(this.state.message);
+    console.log("thissssssssssssss", this.state.message);
     // this.props.onSend(this.state.message);
   }
 
@@ -27,6 +28,7 @@ export default class MessageBox extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input
+          className="messageDisplay"
           type="text"
           placeholder="Enter the Message and press Enter"
           onChange={this.handleChange}

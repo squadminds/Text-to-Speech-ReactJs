@@ -1,0 +1,100 @@
+.iconLeft {
+  flex: 1 1;
+  padding: 10px;
+  display: flex;
+  /* flex-direction: row; */
+  color: rgb(8, 78, 206);
+}
+
+.iconRight {
+  flex-direction: row-reverse;
+  flex: 1 1;
+  padding: 10px;
+  display: flex;
+  color: rgb(8, 78, 206);
+}
+
+.mainList {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  font-weight: 500;
+  border-bottom: 1px solid #eeeef1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-top: 10px;
+}
+
+.searchBar {
+  background: #f4f4f8;
+  padding: 8px 10px;
+  position: -webkit-sticky;
+
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search_input {
+  border-radius: 25px;
+  padding: 8px;
+  background-color: cadetblue;
+  text-align: center;
+  position: sticky;
+  border: none;
+  position: -webkit-sticky;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.conversation-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 4px;
+  margin-top: 7px;
+}
+
+.conversation-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.conversation-snippet {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+  padding: 0%;
+}
+.profile1 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.scrollBar {
+  position: relative;
+  height: calc(111vh - 2rem);
+  width: 110%;
+  overflow-y: auto;
+  background: #fff;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.scrollableContent {
+  background: #fff;
+  grid-row-start: 1;
+  grid-row-end: span 3;
+  position: relative;
+  overflow-y: scroll;
+}

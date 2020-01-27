@@ -19,7 +19,7 @@ export default class MessageBox extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("thissssssssssssss", this.state.message);
+    console.log("sumitttttttttttttt", this.state.message);
     // this.props.onSend(this.state.message);
   }
 

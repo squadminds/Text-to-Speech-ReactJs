@@ -10,7 +10,7 @@ export default class List extends Component {
           <div className="iconLeft">
             <FontAwesomeIcon icon={faCogs} />
           </div>
-          <h1 className="toolbar">Contact List</h1>
+          <h4 className="toolbar">Contact List</h4>
 
           <div className="iconRight">
             <FontAwesomeIcon icon={faUserPlus} />

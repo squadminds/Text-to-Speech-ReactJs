@@ -1,39 +1,47 @@
 import React, { Component } from "react";
+// import { LocalForm, Control } from "react-redux-form";
+
 import "./messageBox.css";
+import UserProfile from "./UserProfile";
+import Bubble from "./Bubble";
 
 export default class MessageBox extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      message: ""
+      message: []
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(e) {
-    // console.log(e.target.value);
+  handleChange = (text) => {
+    // console.log("onchangeeeeeeeeeeeee", e.target.value);
     this.setState({
-      message: e.target.value
+      message: [...this.state.message, text]
     });
-  }
+  };
 
-  handleSubmit(e) {
-    e.preventDefault();
-    console.log("sumitttttttttttttt", this.state.message);
-    // this.props.onSend(this.state.message);
-  }
+  handleSubmit = (values) => {
+    console.log("submitttttttttttttt", values);
+  };
 
   render() {
-    // console.log(this.state.message);
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          className="messageDisplay"
-          type="text"
-          placeholder="Enter the Message and press Enter"
-          onChange={this.handleChange}
-        />
-      </form>
+      <div>
+        {/* <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
+          <Control.text model=".message" className="messageDisplay" />
+        </LocalForm> */}
+        <form onSubmit={this.handleSubmit}>
+          <input
+            className="messageDisplay"
+            type="text"
+            placeholder="Enter the Message and press Enter"
+            onClick={(e) => this.handleChange(e.target.value)}
+          />
+          <Bubble value={this.state.message} />
+        </form>
+      </div>
     );
   }
 }

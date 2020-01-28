@@ -12,7 +12,7 @@ export default class ChatBox extends Component {
   render() {
     return (
       <div className="chat-box">
-        {DummyData.map((message, index) => {
+        {DummyData.map((message) => {
           return (
             <div className="text">
               {message.text}

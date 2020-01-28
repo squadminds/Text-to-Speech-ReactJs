@@ -1,0 +1,41 @@
+[33mcommit fe00ce67d35f8ab5e3b4935e61b2295f3737e8b3[m[33m ([m[1;36mHEAD -> [m[1;32mchore/reactjs-bootstrap[m[33m, [m[1;31morigin/chore/reactjs-bootstrap[m[33m)[m
+Author: Vivek Chaudhary <vivekc@squadmindsinc.com>
+Date:   Mon Jan 27 15:51:06 2020 +0530
+
+    pass data between component
+
+[33mcommit 924cfc8048fb917a98eeb699db1f66952eada437[m
+Author: Vivek Chaudhary <vivekc@squadmindsinc.com>
+Date:   Fri Jan 24 13:24:22 2020 +0530
+
+    deleted unwanted components and worked on DisplayContent component
+
+[33mcommit ece8b1e57c8628aab600cc878628df4713c7f9ae[m
+Author: Vivek Chaudhary <vivekc@squadmindsinc.com>
+Date:   Thu Jan 23 19:09:31 2020 +0530
+
+    chore:worked on list component layout
+
+[33mcommit 4693e23fa3865bb78966c0794c28d72965ea36ee[m
+Author: Vivek Chaudhary <vivekc@squadmindsinc.com>
+Date:   Wed Jan 22 16:48:03 2020 +0530
+
+    Work on Front-end pages(Login & Register) and created a new component(gridSystem.js) worked on its layout view
+
+[33mcommit 83201d5b0fe8a31118a4d38e3a9f42218caa9aa8[m
+Author: Vivek Chaudhary <vivekc@squadmindsinc.com>
+Date:   Wed Jan 22 10:31:05 2020 +0530
+
+    chore: Add initial bootstrap files to project
+
+[33mcommit 6b05c14a052e729921138b4448b01242db17ad78[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/develop[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdevelop[m[33m, [m[1;32mchore/initial-commit[m[33m)[m
+Author: sqm-vivek <60090564+sqm-vivek@users.noreply.github.com>
+Date:   Mon Jan 20 16:04:35 2020 +0530
+
+    Add files via upload
+
+[33mcommit 0316652bcd3b5de777b447fc91d09f5f8a5daa66[m
+Author: chetanbatra25 <46415060+chetanbatra25@users.noreply.github.com>
+Date:   Mon Jan 20 13:14:22 2020 +0530
+
+    Initial commit

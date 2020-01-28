@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
+import IdleTimer from "react-idle-timer";
 
 import MessageBox from "./components/MessageBox";
 import List from "./components/List";
 import DisplayContent from "./components/DisplayContent";
 import UserProfile from "./components/UserProfile";
+import Bubble from "./components/Bubble";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
 
       <List />
       <DisplayContent />
-      <UserProfile />
+      {/* <UserProfile /> */}
+      {/* <Bubble /> */}
       <MessageBox />
     </div>
   );

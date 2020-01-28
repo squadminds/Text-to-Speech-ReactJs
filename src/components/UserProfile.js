@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import "./DisplayContent.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInfoCircle,
-  faPhoneAlt,
-  faVideo
-} from "@fortawesome/free-solid-svg-icons";
+
 export default class UserProfile extends Component {
   render() {
+    console.log("propssssssss", this.props);
     return (
       <div>
         <div className="displayToolbar">
@@ -17,17 +13,6 @@ export default class UserProfile extends Component {
             src="https://randomuser.me/api/portraits/women/43.jpg"
             alt="conversation"
           />{" "}
-          {/* <div className="contentIconRight">
-            <div className="circle">
-              <FontAwesomeIcon icon={faInfoCircle} />
-            </div>
-            <div className="circle">
-              <FontAwesomeIcon icon={faPhoneAlt} />
-            </div>
-            <div className="circle">
-              <FontAwesomeIcon icon={faVideo} />
-            </div>
-          </div> */}
         </div>
       </div>
     );

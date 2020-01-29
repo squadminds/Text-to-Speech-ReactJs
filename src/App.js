@@ -26,6 +26,7 @@ class App extends Component {
   };
 
   render() {
+    console.log("reduxxxxxxxxx", this.props);
     return (
       <div className="App">
         {/* <Router>
@@ -50,7 +51,7 @@ class App extends Component {
         {/* <ToastContainer />; */}
 
         <button onClick={this.simpleAction}>Test redux action</button>
-        <pre>{JSON.stringify(this.props)}</pre>
+        {/* <pre>{JSON.stringify(this.props)}</pre> */}
       </div>
     );
   }

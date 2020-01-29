@@ -48,9 +48,9 @@ export default class List extends Component {
           <div>
             <h6 className="conversation-title">
               {" "}
-              <strong>Jenny</strong>
+              <strong>tina</strong>
             </h6>
-            <p> </p>
+            <p> text message</p>
           </div>
           <div></div>
         </div>

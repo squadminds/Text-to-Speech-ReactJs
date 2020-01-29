@@ -17,7 +17,7 @@ function App() {
 
       <List />
       <DisplayContent />
-      {/* <UserProfile /> */}
+      <UserProfile />
       {/* <Bubble /> */}
       <MessageBox />
     </div>

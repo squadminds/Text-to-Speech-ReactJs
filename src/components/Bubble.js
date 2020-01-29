@@ -6,13 +6,7 @@ export default class Bubble extends Component {
 
   render() {
     return this.props.value.map((item) => {
-      return (
-        item !== "" && (
-          <div className="Bubble">
-            <p>{item} </p>
-          </div>
-        )
-      );
+      return item !== "" && <div className="Bubble">{item}</div>;
     });
   }
 }

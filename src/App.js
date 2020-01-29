@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import IdleTimer from "react-idle-timer";
 import { ToastContainer, toast } from "react-toastify";
+import { simpleAction } from "./actions/simpleAction";
+import { connect } from "react-redux";
 
 import MessageBox from "./components/MessageBox";
 import List from "./components/List";
@@ -10,7 +12,7 @@ import UserProfile from "./components/UserProfile";
 import { Router } from "react-router";
 import Routes from "./components/Route";
 
-export default class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.idleTimer = null;
@@ -18,6 +20,10 @@ export default class App extends Component {
     this.onActive = this._onActive.bind(this);
     this.onIdle = this._onIdle.bind(this);
   }
+
+  simpleAction = (event) => {
+    this.props.simpleAction();
+  };
 
   render() {
     return (
@@ -36,12 +42,15 @@ export default class App extends Component {
           debounce={250}
           timeout={5000}
         />
-        <List />
-        <DisplayContent />
+        {/* <List /> */}
+        {/* <DisplayContent /> */}
 
         {/* <UserProfile /> */}
-        <MessageBox />
+        {/* <MessageBox /> */}
         {/* <ToastContainer />; */}
+
+        <button onClick={this.simpleAction}>Test redux action</button>
+        <pre>{JSON.stringify(this.props)}</pre>
       </div>
     );
   }
@@ -63,3 +72,13 @@ export default class App extends Component {
 
   notify = () => toast("Session time out !");
 }
+
+const mapStateToProps = (state) => ({
+  ...state
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  simpleAction: () => dispatch(simpleAction())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

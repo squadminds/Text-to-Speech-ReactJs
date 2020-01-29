@@ -7,6 +7,8 @@ import MessageBox from "./components/MessageBox";
 import List from "./components/List";
 import DisplayContent from "./components/DisplayContent";
 import UserProfile from "./components/UserProfile";
+import { Router } from "react-router";
+import Routes from "./components/Route";
 
 export default class App extends Component {
   constructor(props) {
@@ -36,6 +38,7 @@ export default class App extends Component {
         />
         <List />
         <DisplayContent />
+
         {/* <UserProfile /> */}
         <MessageBox />
         {/* <ToastContainer />; */}

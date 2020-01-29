@@ -2,10 +2,13 @@
   padding: 10px;
   display: flex;
   align-items: center;
-  background: aqua;
+  background: rgb(88, 94, 94);
   border-top: 1px solid #eeeef1;
   position: fixed;
   width: 100%;
   bottom: 0;
   margin-left: auto;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  flex-direction: row;
 }

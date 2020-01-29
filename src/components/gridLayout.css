@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 90%;
+  /* border: 1px solid black; */
+  margin: 50px auto;
+  display: grid;
+  grid-template-rows: 60px 70px 100px 100px;
+  grid-template-columns: 400px 1fr;
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.div1 {
+  /* grid-column: 1/-1; */
+  grid-row: 1/-1;
+}
+
+.div2 {
+  background-color: rgb(231, 231, 238);
+}
+
+.div3 {
+  background-color: rgb(216, 216, 233);
+}

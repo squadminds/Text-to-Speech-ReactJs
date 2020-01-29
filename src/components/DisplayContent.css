@@ -1,7 +1,6 @@
 .displayScrollableContent {
   background: #fff;
-  grid-row-start: 1;
-  grid-row-end: span 3;
+
   position: relative;
 }
 

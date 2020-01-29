@@ -10,6 +10,7 @@ import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 import YourApp from "./components/textTimeOut";
 import Toast from "./components/toaster";
+import GridLayout from "./components/gridLayout";
 Sentry.init({
   dsn: "https://a77eed72bbf84889b72bc430fa710dec@sentry.io/2029303"
 });

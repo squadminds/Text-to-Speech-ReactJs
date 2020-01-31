@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../ProfileUsers.css";
 
-export default class UserProfile extends Component {
+export default class SecondUserProfile extends Component {
   render() {
     console.log("propssssssss", this.props);
     return (
@@ -10,7 +10,7 @@ export default class UserProfile extends Component {
           <h4>Jenny</h4>
           <img
             class="conversation-photo"
-            src="https://randomuser.me/api/portraits/women/43.jpg"
+            src="https://randomuser.me/api/portraits/women/50.jpg"
             alt="conversation"
           />{" "}
         </div>

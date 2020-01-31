@@ -4,6 +4,7 @@ import { faCogs, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import "./List.css";
 import UserProfile from "./UserProfile";
 import Bubble from "./Bubble";
+import { Link } from "react-router-dom";
 export default class List extends Component {
   constructor(props) {
     super(props);
@@ -13,14 +14,16 @@ export default class List extends Component {
 
   onButtonClick() {
     console.log("clickkkkkkkkkkkkk", this.props.value);
-    return {};
+    this.props.history.push("/SecondUserProfile");
   }
 
   _onButtonClick() {
     console.log("clickkkkkkkkkkkkk", this.props.value);
+    this.props.history.push("/UserProfile");
   }
 
   render() {
+    console.log("lissssssstt", this.props.value);
     return (
       <div className="scrollBar">
         <div className="mainList">
@@ -48,17 +51,16 @@ export default class List extends Component {
             alt="conversation"
           />{" "}
           <div>
-            <button
-              type="button"
-              class="btn btn-link"
-              onClick={this.onButtonClick}
-            >
-              <h6 className="conversation-title">
-                {" "}
-                <strong>Jenny</strong>
-              </h6>
-              <p className="conversation-snippet"> New message </p>
-            </button>
+            <h6 className="conversation-title">
+              {" "}
+              <li>Jenny</li>
+            </h6>
+            {this.props.value.map((item) => {
+              return (
+                item !== "" && <p className="conversation-snippet"> {item} </p>
+              );
+            })}
+            <p className="conversation-snippet"> {this.props.value} </p>
           </div>
           <div></div>
         </div>
@@ -70,16 +72,10 @@ export default class List extends Component {
             alt="conversation"
           />{" "}
           <div>
-            <button
-              type="button"
-              class="btn btn-link"
-              onClick={this.onButtonClick}
-            >
-              <h6 className="conversation-title">
-                {" "}
-                <strong>tina</strong>
-              </h6>
-            </button>
+            <h6 className="conversation-title">
+              {" "}
+              <li>tina</li>
+            </h6>
           </div>
           <div></div>
         </div>

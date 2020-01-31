@@ -13,17 +13,12 @@ export default class MessageBox extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange = (text) => {
-    // console.log("onchangeeeeeeeeeeeee", e.target.value);
+    console.log("onchangeeeeeeeeeeeee", text);
     this.setState({
       message: [...this.state.message, text]
     });
-  };
-
-  handleSubmit = (values) => {
-    console.log("submitttttttttttttt", values);
   };
 
   render() {
@@ -32,14 +27,15 @@ export default class MessageBox extends Component {
         {/* <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
           <Control.text model=".message" className="messageDisplay" />
         </LocalForm> */}
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <input
             className="messageDisplay"
             type="text"
             placeholder="Enter the Message and press Enter"
-            onClick={(e) => this.handleChange(e.target.value)}
+            onClick={(e) => this.props.handleChange(e.target.value)}
           />
-          <Bubble value={this.state.message} />
+          {console.log("xxxxxxxxxxxxxxxxxxxx", this.state.message)}
+          {/* <Bubble value={this.state.message} /> */}
         </form>
       </div>
     );

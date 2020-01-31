@@ -10,13 +10,13 @@ export default class Login extends Component {
     this._onButtonClick = this._onButtonClick.bind(this);
   }
 
-  _onButtonClick() {
-    // console.log("props :", this.props);
-    // this.setState({
-    //   LoginComponent: true
-    // });
-    this.props.history.push("/Register");
-  }
+  // _onButtonClick() {
+  // console.log("props :", this.props);
+  // this.setState({
+  //   LoginComponent: true
+  // });
+  // this.props.history.push("/Register");
+  // }
 
   render() {
     return (

@@ -13,17 +13,16 @@ export default class List extends Component {
   }
 
   onButtonClick() {
-    console.log("clickkkkkkkkkkkkk", this.props.value);
-    this.props.history.push("/SecondUserProfile");
+    // console.log("clickkkkkkkkkkkkk", this.props.value);
   }
 
   _onButtonClick() {
-    console.log("clickkkkkkkkkkkkk", this.props.value);
+    // console.log("clickkkkkkkkkkkkk", this.props.value);
     this.props.history.push("/UserProfile");
   }
 
   render() {
-    console.log("lissssssstt", this.props.value);
+    // console.log("lissssssstt", this.props.value);
     return (
       <div className="scrollBar">
         <div className="mainList">
@@ -55,12 +54,11 @@ export default class List extends Component {
               {" "}
               <li>Jenny</li>
             </h6>
-            {this.props.value.map((item) => {
+            {/* {this.props.value.map((item) => {
               return (
                 item !== "" && <p className="conversation-snippet"> {item} </p>
               );
-            })}
-            <p className="conversation-snippet"> {this.props.value} </p>
+            })} */}
           </div>
           <div></div>
         </div>

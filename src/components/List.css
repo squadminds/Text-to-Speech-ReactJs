@@ -3,7 +3,7 @@
   padding: 10px;
   display: flex;
   /* flex-direction: row; */
-  color: rgb(8, 78, 206);
+  color: rgb(17, 18, 20);
 }
 
 .iconRight {
@@ -11,23 +11,22 @@
   flex: 1 1;
   padding: 10px;
   display: flex;
-  color: rgb(8, 78, 206);
+  color: rgb(17, 18, 20);
 }
 
 .mainList {
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: #d6ed17ff;
   font-weight: 500;
   border-bottom: 1px solid #eeeef1;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   margin-top: 10px;
 }
 
 .searchBar {
-  background: #f4f4f8;
+  background: #606060ff;
   padding: 8px 10px;
   position: -webkit-sticky;
 
@@ -39,7 +38,7 @@
 .search_input {
   border-radius: 25px;
   padding: 8px;
-  background-color: cadetblue;
+  background-color: #d6ed17ff;
   text-align: center;
   position: sticky;
   border: none;
@@ -86,12 +85,10 @@
   height: calc(111vh - 2rem);
   width: auto;
   overflow-y: auto;
-  background: #fff;
+  background: #606060ff;
   grid-row-start: 1;
   grid-row-end: 3;
-}
-p {
-  background-color: brown;
+  background-color: #606060ff;
 }
 
 .scrollableContent {

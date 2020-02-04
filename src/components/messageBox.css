@@ -7,8 +7,13 @@
   position: fixed;
   width: 100%;
   bottom: 0;
-  margin-left: auto;
+  margin-left: 491px;
   overflow-y: scroll;
   flex-wrap: wrap;
   flex-direction: row;
+  grid-column: 2 / span 3;
+}
+
+.messages {
+  overflow-y: scroll;
 }

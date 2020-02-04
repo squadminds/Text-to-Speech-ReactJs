@@ -1,12 +1,13 @@
 .Bubble {
   border-radius: 25px;
-  background-color: rgb(207, 136, 136);
+  background-color: #d6ed17ff;
   padding: 16px;
   stroke-width: auto;
   color: rgb(24, 24, 22);
   margin-top: 20px;
   margin-bottom: 20px;
   width: fit-content;
+  height: fit-content;
   /* min-width: 50px; */
   /* max-width: 100px; */
 }

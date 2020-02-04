@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
 import IdleTimer from "react-idle-timer";
-import { ToastContainer, toast } from "react-toastify";
 import { simpleAction } from "./actions/simpleAction";
 import { connect } from "react-redux";
 import MessageBox from "./components/MessageBox";
 import List from "./components/List";
-import Bubble from "./components/Bubble";
 import swal from "sweetalert";
 
 import DisplayContent from "./components/DisplayContent";
-import UserProfile from "./components/UserProfile";
-import { Router } from "react-router";
-import Routes from "./components/Route";
+import TextBox from "./components/textBox";
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +16,7 @@ class App extends Component {
 
     this.state = {
       message: [],
-      timeout: 5000,
+      timeout: 500000,
       showModal: false,
       userLoggedIn: false,
       isTimedOut: false
@@ -34,14 +30,6 @@ class App extends Component {
   simpleAction = (event) => {
     this.props.simpleAction();
   };
-
-  updateData(data) {
-    console.log("data : ", data);
-
-    this.setState({
-      message: [...this.state.message, data]
-    });
-  }
 
   _onAction(e) {
     console.log("user did something", e);
@@ -64,9 +52,9 @@ class App extends Component {
     }
     swal({
       title: "Your session is about to expire.",
-      text: "You will be logged out in 60 seconds.",
-      // closeOnClickOutside: false,
-      // closeOnEsc: false,
+      text: "wooosshhhhh.",
+      closeOnClickOutside: false,
+      closeOnEsc: false,
       icon: "warning",
       buttons: true,
 
@@ -100,15 +88,13 @@ class App extends Component {
         {/* <Router>
           <Routes />
         </Router> */}
-        <List value={this.state.message} />
+        <List />
         <DisplayContent />
-        {/* <Bubble value={this.state.message} /> */}
+        <MessageBox />
+        <TextBox />
 
-        <MessageBox handleChange={(data) => this.updateData(data)} />
-        {/* <ToastContainer />; */}
-
-        <button onClick={this.simpleAction}>Test redux action</button>
-        <pre>{JSON.stringify(this.props)}</pre>
+        {/* <button onClick={this.simpleAction}>Test redux action</button> */}
+        {/* <pre>{JSON.stringify(this.props)}</pre> */}
       </div>
     );
   }

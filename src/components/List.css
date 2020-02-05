@@ -83,7 +83,7 @@
 .scrollBar {
   position: relative;
   height: calc(111vh - 2rem);
-  width: auto;
+  width: 347px;
   overflow-y: auto;
   background: #606060ff;
   grid-row-start: 1;

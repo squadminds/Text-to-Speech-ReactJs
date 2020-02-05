@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import "./List.css";
 
-export default class List extends Component {
+export default class List extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       users: [],
-      userId: ""
+      userId: null,
+      posts: []
     };
 
     // this.onButtonClick = this.onButtonClick.bind(this);
@@ -25,13 +26,24 @@ export default class List extends Component {
           users: json
         });
       });
+
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => response.json())
+
+      .then((json) => {
+        this.setState({
+          posts: json
+        });
+      });
   }
 
   render() {
-    var { users, userId } = this.state;
-    console.log("useridddddd", userId);
+    var { users, userId, posts, final } = this.state;
+    // console.log("useridddddd", userId, final);
+    const result = posts.filter((item) => item.userId === userId);
 
-    // console.log("lissssssstt", this.props.value);
+    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", result);
+
     return (
       <div className="scrollBar">
         <div className="mainList">
@@ -56,9 +68,7 @@ export default class List extends Component {
           <ul>
             {users.map((user) => (
               <li key={user.id}>
-                {" "}
                 <div className="buttons">
-                  {" "}
                   <button
                     type="button"
                     onClick={() => this.setState({ userId: user.id })}

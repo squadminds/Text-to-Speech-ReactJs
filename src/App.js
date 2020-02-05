@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import IdleTimer from "react-idle-timer";
-import { simpleAction } from "./actions/simpleAction";
-import { connect } from "react-redux";
 import MessageBox from "./components/MessageBox";
 import List from "./components/List";
 import swal from "sweetalert";
@@ -27,22 +25,19 @@ class App extends Component {
     this.onActive = this._onActive.bind(this);
     this.onIdle = this._onIdle.bind(this);
   }
-  simpleAction = (event) => {
-    this.props.simpleAction();
-  };
 
   _onAction(e) {
-    console.log("user did something", e);
+    // console.log("user did something", e);
     this.setState({ isTimedOut: false });
   }
 
   _onActive(e) {
-    console.log("user is active", e);
+    // console.log("user is active", e);
     this.setState({ isTimedOut: false });
   }
 
   _onIdle(e) {
-    console.log("user is idle", e);
+    // console.log("user is idle", e);
     const isTimedOut = this.state.isTimedOut;
     if (isTimedOut) {
     } else {
@@ -70,8 +65,6 @@ class App extends Component {
     });
   }
   render() {
-    console.log("reduxxxxxxxxx", this.props);
-    console.log("childdddddddddddd----data", this.state.message);
     return (
       <div className="App">
         <IdleTimer
@@ -100,12 +93,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  ...state
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  simpleAction: () => dispatch(simpleAction())
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

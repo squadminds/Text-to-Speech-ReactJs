@@ -98,3 +98,7 @@
   position: relative;
   overflow-y: scroll;
 }
+
+.buttons {
+  padding-bottom: 10px;
+}

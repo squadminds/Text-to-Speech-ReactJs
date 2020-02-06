@@ -9,7 +9,7 @@ export default class UserProfile extends Component {
         <div className="displayProfile">
           <h4>Jenny</h4>
           <img
-            class="conversation-photo"
+            className="conversation-photo"
             src="https://randomuser.me/api/portraits/women/43.jpg"
             alt="conversation"
           />{" "}

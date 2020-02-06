@@ -24,7 +24,7 @@ export default class Bubble extends Component {
     // const result = posts.filter(
     //   (post) => post.userId === this.props.userId && userId
     // );
-    // console.log("resultttt", result);
+    console.log("resultttt", this.props.result);
 
     return (
       <div className="Bubble">

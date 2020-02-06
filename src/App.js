@@ -4,9 +4,9 @@ import IdleTimer from "react-idle-timer";
 import MessageBox from "./components/MessageBox";
 import List from "./components/List";
 import swal from "sweetalert";
-
 import DisplayContent from "./components/DisplayContent";
 import TextBox from "./components/textBox";
+import UserProfile from "./components/UserProfile";
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +17,8 @@ class App extends Component {
       timeout: 500000,
       showModal: false,
       userLoggedIn: false,
-      isTimedOut: false
+      isTimedOut: false,
+      matchedId: []
     };
 
     this.idleTimer = null;
@@ -25,6 +26,10 @@ class App extends Component {
     this.onActive = this._onActive.bind(this);
     this.onIdle = this._onIdle.bind(this);
   }
+
+  getData = (matchedId) => {
+    this.setState({ matchedId: matchedId });
+  };
 
   _onAction(e) {
     // console.log("user did something", e);
@@ -66,6 +71,8 @@ class App extends Component {
   }
 
   render() {
+    console.log("dddddddddddddddddddd", this.state.matchedId);
+
     return (
       <div className="App">
         <IdleTimer
@@ -79,14 +86,12 @@ class App extends Component {
           debounce={250}
           timeout={this.state.timeout}
         />
-        {/* <Router>
-          <Routes />
-        </Router> */}
-        <List />
 
-        <DisplayContent />
-        <MessageBox />
-        <TextBox />
+        {/* <List  /> */}
+        {/* <UserProfile /> */}
+        {/* <DisplayContent /> */}
+        {/* <MessageBox /> */}
+        {/* <TextBox /> */}
 
         {/* <button onClick={this.simpleAction}>Test redux action</button> */}
         {/* <pre>{JSON.stringify(this.props)}</pre> */}

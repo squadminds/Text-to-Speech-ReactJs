@@ -10,7 +10,8 @@ export default class List extends React.Component {
     this.state = {
       users: [],
       userId: null,
-      posts: []
+      posts: [],
+      matchedId: []
     };
 
     // this.onButtonClick = this.onButtonClick.bind(this);
@@ -38,11 +39,10 @@ export default class List extends React.Component {
   }
 
   render() {
-    var { users, userId, posts, final } = this.state;
+    var { users, userId, posts, matchedId } = this.state;
     // console.log("useridddddd", userId, final);
     const result = posts.filter((item) => item.userId === userId);
-
-    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", result);
+    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", matchedId);
 
     return (
       <div className="scrollBar">

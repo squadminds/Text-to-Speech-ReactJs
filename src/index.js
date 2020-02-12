@@ -7,6 +7,7 @@ import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./Routes/routes";
+// import List from "./components/List";
 
 Sentry.init({
   dsn: "https://a77eed72bbf84889b72bc430fa710dec@sentry.io/2029303"

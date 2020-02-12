@@ -2,7 +2,6 @@
   flex: 1 1;
   padding: 10px;
   display: flex;
-  /* flex-direction: row; */
   color: rgb(17, 18, 20);
 }
 
@@ -80,23 +79,13 @@
   padding: 10px;
 }
 
-.scrollBar {
+.leftList {
   position: relative;
-  height: calc(111vh - 2rem);
-  width: 347px;
-  overflow-y: auto;
-  background: #606060ff;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  background-color: #606060ff;
-}
 
-.scrollableContent {
-  background: #fff;
-  grid-row-start: 1;
-  grid-row-end: span 3;
-  position: relative;
   overflow-y: scroll;
+  background: #606060ff;
+
+  background-color: #606060ff;
 }
 
 .buttons {

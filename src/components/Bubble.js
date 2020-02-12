@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./chatbubble.css";
+import { Link } from "react-router-dom";
 
 export default class Bubble extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ export default class Bubble extends Component {
     };
   }
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch(`https://jsonplaceholder.typicode.com/posts?userId=1`)
       .then((response) => response.json())
 
       .then((json) => {
@@ -24,13 +24,14 @@ export default class Bubble extends Component {
     // const result = posts.filter(
     //   (post) => post.userId === this.props.userId && userId
     // );
-    console.log("resultttt", this.props.result);
 
     return (
       <div className="Bubble">
-        {" "}
+        <Link to={`/`}>Back</Link>{" "}
         {posts.map((post) => (
           <p>
+            userId===={post.userId}
+            <br />
             title==={post.title}
             <br />
             body==={post.body}

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import { LocalForm, Control } from "react-redux-form";
 
-import "./messageBox.css";
 import Bubble from "./Bubble";
 
 export default class MessageBox extends Component {
@@ -13,12 +12,10 @@ export default class MessageBox extends Component {
   }
 
   render() {
+    console.log("messssaaaaaaggggggggeeeeeeeee", this.props);
+
     return (
       <div className="messages">
-        {/* <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
-          <Control.text model=".message" className="messageDisplay" />
-        </LocalForm> */}
-
         <Bubble />
       </div>
     );

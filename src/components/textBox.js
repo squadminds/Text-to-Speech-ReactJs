@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Bubble from "./Bubble";
-
 export default class TextBox extends Component {
   render() {
     return (
-      <div>
+      <div className="text-field">
         <input
           className="messageDisplay"
           type="text"

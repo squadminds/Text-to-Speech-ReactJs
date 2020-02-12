@@ -87,14 +87,11 @@ class App extends Component {
           timeout={this.state.timeout}
         />
 
-        {/* <List  /> */}
-        {/* <UserProfile /> */}
-        {/* <DisplayContent /> */}
-        {/* <MessageBox /> */}
-        {/* <TextBox /> */}
-
-        {/* <button onClick={this.simpleAction}>Test redux action</button> */}
-        {/* <pre>{JSON.stringify(this.props)}</pre> */}
+        <List />
+        <DisplayContent />
+        <UserProfile />
+        <MessageBox />
+        <TextBox />
       </div>
     );
   }

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUserPlus } from "@fortawesome/free-solid-svg-icons";
-import "./List.css";
-
+import { Link } from "react-router-dom";
+import "../components/List.css";
 export default class List extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +19,7 @@ export default class List extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch(`https://jsonplaceholder.typicode.com/users/`)
       .then((response) => response.json())
 
       .then((json) => {
@@ -40,12 +40,10 @@ export default class List extends React.Component {
 
   render() {
     var { users, userId, posts, matchedId } = this.state;
-    // console.log("useridddddd", userId, final);
     const result = posts.filter((item) => item.userId === userId);
-    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", matchedId);
 
     return (
-      <div className="scrollBar">
+      <div className="leftList">
         <div className="mainList">
           <div className="iconLeft">
             <FontAwesomeIcon icon={faCogs} />
@@ -74,7 +72,7 @@ export default class List extends React.Component {
                     onClick={() => this.setState({ userId: user.id })}
                     class="btn btn-warning"
                   >
-                    {user.name}
+                    <Link to={`/posts/${user.id}`}>{user.name}</Link>
                   </button>
                 </div>
               </li>

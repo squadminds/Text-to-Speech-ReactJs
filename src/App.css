@@ -1,15 +1,84 @@
-.App {
-  display: grid;
-  width: 100%;
-  height: 100vh;
-  background: #eeeef1;
-  grid-template-columns: auto auto;
-  grid-template-rows: 60px auto 60px;
-  grid-column-gap: 40px;
-  grid-row-gap: 1px;
-  background-color: rgba(49, 59, 59, 0.993);
+:root {
+  --main-color: #5ea3d0;
+  --secondary-color: white;
+  --main-text-color: #3e5869;
+  --secondary-text-color: #b0c7d6;
+  --send-message-form: #f5f5f5;
 }
 
+html,
 body {
-  background-color: rgb(179, 175, 184);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  font-weight: 200;
+  color: #3e5869;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  display: grid;
+  height: 100%;
+  background-color: rgb(236, 208, 84);
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas:
+    "l l c c c c c c "
+    "l l u u u u u u  "
+    "l l m m m m m m  "
+    "l l m m m m m m "
+    "l l m m m m m m  "
+    "l l m m m m m m "
+    "l l m m m m m m "
+    "l l t t t t t t";
+}
+
+.leftList {
+  grid-area: l;
+  height: 100%;
+}
+
+.conversation-title {
+  grid-area: c;
+  height: fit-content;
+  width: 100%;
+  background-color: rgb(218, 198, 24);
+}
+
+.text-field {
+  grid-area: t;
+}
+.messages {
+  grid-area: m;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.userProfile {
+  grid-area: u;
+  background-color: #606060ff;
+}
+
+.messageDisplay {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 0;
+  border-style: none;
+  display: flex;
+  background-color: cadetblue;
+  text-decoration-color: none;
+}
+
+.displayProfile {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  position: sticky;
+  margin-top: 6px;
+  margin-right: 243px;
+  width: 100%;
 }

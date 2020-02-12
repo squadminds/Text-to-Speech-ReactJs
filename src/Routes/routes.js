@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
-import List from "../components/List";
-import TextBox from "../components/textBox";
-import UserProfile from "../components/UserProfile";
 import MessageBox from "../components/MessageBox";
+import App from "../App";
+
+import Layout from "../components/Layout";
+import List from "../components/List";
 
 export default class Routes extends Component {
   render() {
     return (
       <Router>
-        <Route exact path="/MessageBox" component={MessageBox} />
-        <Route exact path="/UserProfile" component={UserProfile} />
-        <Route exact path="/TextBox" component={TextBox} />
-        <Route exact path="/" component={List} />
+        {/* <Route exact path="/MessageBox" component={MessageBox} /> */}
+        {/* <Route exact path="/posts/:userId" component={Layout2} /> */}
+
+        <Route exact path="/" component={App} />
       </Router>
     );
   }

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import fire from "./components/config";
+
 import IdleTimer from "react-idle-timer";
 import MessageBox from "./components/MessageBox";
 import List from "./components/List";
@@ -7,18 +9,20 @@ import swal from "sweetalert";
 import DisplayContent from "./components/DisplayContent";
 import TextBox from "./components/textBox";
 import UserProfile from "./components/UserProfile";
-
+import Login from "./components/Login";
+import Layout from "./components/Layout";
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      message: [],
+      messages: "",
       timeout: 500000,
       showModal: false,
       userLoggedIn: false,
       isTimedOut: false,
-      matchedId: []
+      matchedId: [],
+      user: {}
     };
 
     this.idleTimer = null;
@@ -69,12 +73,23 @@ class App extends Component {
       }
     });
   }
-
+  // componentDidMount() {
+  //   this.authListener();
+  // }
+  // authListener() {
+  //   fire.auth().onAuthStateChanged((user) => {
+  //     console.log("userrrrr", user);
+  //     if (user) {
+  //       this.setState({ user });
+  //     } else {
+  //       this.setState({ user: null });
+  //     }
+  //   });
+  // }
   render() {
-    console.log("dddddddddddddddddddd", this.state.matchedId);
-
     return (
       <div className="App">
+        {/* {this.state.user ? <Layout /> : <Login />} */}
         <IdleTimer
           ref={(ref) => {
             this.idleTimer = ref;
@@ -89,6 +104,7 @@ class App extends Component {
 
         <List />
         <DisplayContent />
+
         <UserProfile />
         <MessageBox />
         <TextBox />

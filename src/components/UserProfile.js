@@ -9,7 +9,6 @@ import "../App.css";
 
 export default class UserProfile extends Component {
   render() {
-    console.log("propssssssss", this.props);
     return (
       <div className="userProfile">
         <div className="displayProfile">

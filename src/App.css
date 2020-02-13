@@ -23,18 +23,18 @@ body {
 .App {
   display: grid;
   height: 100%;
-  background-color: rgb(236, 208, 84);
+  /* background-color: rgb(236, 208, 84); */
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 60px;
   grid-template-areas:
     "l l c c c c c c "
-    "l l u u u u u u  "
-    "l l m m m m m m  "
-    "l l m m m m m m "
-    "l l m m m m m m  "
-    "l l m m m m m m "
-    "l l m m m m m m "
-    "l l t t t t t t";
+    "l l u u u u u u "
+    "l l t t t t t t "
+    "l l t t t t t t "
+    "l l t t t t t t "
+    "l l t t t t t t "
+    "l l t t t t t t "
+    "l l x x x x x x ";
 }
 
 .leftList {
@@ -55,7 +55,7 @@ body {
 .messages {
   grid-area: m;
   max-height: 600px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .userProfile {

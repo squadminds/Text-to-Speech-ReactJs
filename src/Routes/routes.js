@@ -4,7 +4,8 @@ import MessageBox from "../components/MessageBox";
 import App from "../App";
 
 import Layout from "../components/Layout";
-import List from "../components/List";
+import Login from "../components/Login";
+import Register from "../components/Register";
 
 export default class Routes extends Component {
   render() {
@@ -13,7 +14,10 @@ export default class Routes extends Component {
         {/* <Route exact path="/MessageBox" component={MessageBox} /> */}
         {/* <Route exact path="/posts/:userId" component={Layout2} /> */}
 
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={Login} />
+
+        <Route exact path="/Register" component={Register} />
+        <Route exact path="/Layout" component={Layout} />
       </Router>
     );
   }

@@ -8,37 +8,21 @@ export default class Bubble extends Component {
       posts: []
     };
   }
-  componentDidMount() {
-    fetch(`https://jsonplaceholder.typicode.com/posts?userId=1`)
-      .then((response) => response.json())
+  // componentDidMount() {
+  //   fetch(`https://jsonplaceholder.typicode.com/posts?userId=1`)
+  //     .then((response) => response.json())
 
-      .then((json) => {
-        this.setState({
-          posts: json
-        });
-      });
-  }
+  //     .then((json) => {
+  //       this.setState({
+  //         posts: json
+  //       });
+  //     });
+  // }
 
   render() {
-    var { posts } = this.state;
-    // const result = posts.filter(
-    //   (post) => post.userId === this.props.userId && userId
-    // );
+    // var { posts } = this.state;
 
-    return (
-      <div className="Bubble">
-        <Link to={`/`}>Back</Link>{" "}
-        {posts.map((post) => (
-          <p>
-            userId===={post.userId}
-            <br />
-            title==={post.title}
-            <br />
-            body==={post.body}
-          </p>
-        ))}
-      </div>
-    );
+    return <div className="Bubble"></div>;
     // return this.props.value.map((item) => {
     //   return item !== "" && <div className="Bubble">{item}</div>;
   }
